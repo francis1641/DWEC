@@ -1,0 +1,13 @@
+var time = new Date;
+year= time.getFullYear();
+month= time.getMonth();
+day= time.getDate();
+hour= time.getHours();
+minutes= time.getMinutes();
+seconds= time.getSeconds();
+document.write("El año actual es "+year+ "<br>");
+document.write("El mes actual es "+month+"<br>");
+document.write("El dia del mes actual es "+day+"<br>");
+document.write("La hora actual es "+hour+"<br>");
+document.write("Los minutos actuales son "+minutes+"<br>");
+document.write("Los segundos actuales son "+seconds);
