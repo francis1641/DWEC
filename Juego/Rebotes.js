@@ -10,6 +10,7 @@ var anchoPala = 75;
 var paddleX = (canvas.width-anchoPala)/2;
 var presionarDerecha = false;
 var presionarIzquierda = false;
+var vidas = 3;
 
 document.addEventListener("keydown", presionarTecla, false);
 document.addEventListener("keyup", soltarTecla, false);
@@ -45,12 +46,18 @@ function dibujarPala() {
     ctx.fill();
 
 }
+function dibujarVidas() {
+    ctx.font = "10px Times New Roman";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillText("Vidas: "+vidas, canvas.width-65, 20);
+}
 
 function dibujar() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dibujarPala();
     dibujarBola();
-    
+    dibujarVidas();
+
     if(x + dx > canvas.width-radiobola || x + dx < radiobola) {
         dx = -dx;
     }
@@ -62,8 +69,17 @@ function dibujar() {
             dy = -dy;
         }
         else {
-            alert("HAS PERDIDO");
-            document.location.reload();
+            vidas--;
+            if(!vidas) {
+             document.write("HAS FRACASADO");
+            }
+            else {
+                x = canvas.width/2;
+                y = canvas.height-30;
+                dx = 3;
+                dy = -3;
+                paddleX = (canvas.width-anchoPala)/2;
+            }
         }
     }
     
