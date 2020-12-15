@@ -1,0 +1,14 @@
+{
+    "listaCorreo":[
+        {
+        "remitente": "antonio lopez",
+        "asunto": "ejercicio",
+        "texto": "dudas ejercicio 1"
+        },
+        {
+            "remitente": "juan valdes",
+            "asunto": "ejercicip 34",
+            "texto": "dudas ejercicio 43"
+        }
+    ]
+}
