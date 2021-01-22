@@ -3,7 +3,13 @@ var app = new Vue({
     data: {
       nuevoRecordatorio: "",
       listaRecordatorio: [],
-      isButtomDisabled: true
+      isButtomDisabled: true,
+      empiezaPor: ""
+    },
+
+    mounted(){
+        if(localStorage.listaTareas)
+            this.listaRecordatorio=JSON.parse(localStorage.listaTareas);
     },
 
     methods:{
@@ -16,6 +22,7 @@ var app = new Vue({
                 }          
         );
         this.nuevoRecordatorio="";
+        this.actulizarLocalStorage();
         },
         cambiarEstadoTarea: function(posicion){
             //this.listaRecordatorio.splice(posicion,1);
@@ -32,10 +39,17 @@ var app = new Vue({
                 this.isButtomDisabled=true;
         },
         quitarCompletadas: function(){
+
+           // this.listaRecordatorio.filter()
             for(let i=0; i<this.listaRecordatorio.length; i++){
                 if(this.listaRecordatorio[i].completado)
                 this.listaRecordatorio.splice(i,1);
             }
+        },
+        
+        actulizarLocalStorage: function(){
+            localStorage.listaTareas=JSON.stringify(this.listaRecordatorio);
+
         }
     },
     computed: {
@@ -54,6 +68,16 @@ var app = new Vue({
             return total;
         },
 
+        listaRecordatorioFiltrada: function(){
+                
+            return this.listaRecordatorio.filter((recordatorio)=>
+            {
+                if(recordatorio.titulo==this.empiezaPor)
+                    return true;
+                else
+                    return false;
+            }
+            )},
 
     }
   })

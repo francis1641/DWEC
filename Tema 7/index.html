@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,12 @@
 </head>
 <body>
     <div id="miAplicacion">
-        <input v-on:keyup.enter="anadirRecordatorio" v-on:keydown="habilitarBoton" v-model="nuevoRecordatorio">
+        <input v-on:keyup.enter="anadirRecordatorio" 
+        v-on:keydown="habilitarBoton" 
+        v-model="nuevoRecordatorio"><br><br>
         <button v-bind:disabled="isButtomDisabled" v-on:click="anadirRecordatorio">Nuevo Recordatorio</button>
+
+        <p>Filtrar tarea</p><input v-model="empiezaPor">
             <p>{{totalPendientes}} tareas pendientes de un total de tareas: {{totalTareas}}</p>
             <button v-on:click="quitarCompletadas">Borrar Tareas Completadas</button>
                 <div v-for="(recordatorio, index) in listaRecordatorio">
