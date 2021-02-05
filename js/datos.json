@@ -1,0 +1,63 @@
+
+   {"DatosPersonales":[{
+    "Foto": "Imagenes/Perfil.png", "Nombre":"Francisco Cenit Molina", "FechaNacimiento":"07/08/2001", "Direccion":"C/Pinos Del Valle, 8", "Localidad":"Padul, Granada", "Correo":"franciscm107@gmail.es", "Telefono":"620079347", "Descripcion":"Actualmente estudiando 2º Desarrollo de Aplicaciones Web"}],
+    "PersonalData":[{
+        "Photo": "Imagenes/foto.jpg", "Name":"Francisco Cenit Molina", "Birthdate":"07/08/2001", "Direction":"C/Pinos Del Valle, 8", "City":"Padul, Granada", "Email":"franciscm107@gmail.es", "Phone Number":"620079347", "Description":"Currently studying 2nd Web Application Development"}],
+
+
+    "ExperienciaLaboral":[{
+    "Imagen":"Imagenes/Camionero.jfif", "Trabajo": "Ayudante de Camionero", "Empresa": "TRANSPORTES LUIS CENIT SL", "Fecha": "Feb-2015 - Sept-2018", "Descripcion": "Ayudaba en todo lo que se me pedía, como descargar, hablar con personas..."},
+    {"Imagen":"Imagenes/Local.jfif", "Trabajo": "Camarero", "Empresa": "A K Fran", "Fecha": "Jun-2019 - Ago-2019", "Descripcion": "Camarero repartiendo bebidas, ayudando en cocina, etc"}],
+    "WorkExperience":[{
+        "Photo":"Imagenes/Camionero.jfif", "Work": "Assistant truck Driver", "Company": "TRANSPORTES LUIS CENIT SL", "Date": "Feb-2015 - Sept-2018", "Description": "I helped in everything that was asked of me, like downloading, talking to people ..."},
+        {"Photo":"Imagenes/Local.jfif", "Work": "Waiter", "Company": "A K Fran", "Date": "Ago-2019 - Jun-2020", "Description": "Waiter delivering drinks, helping in the kitchen, etc."}
+        ],
+
+
+    "Referencias":[{
+        "Imagen2":"Imagenes/Luis.jfif", "Jefe": "Luis Cenit Duarte", "Empresa": "Propietario de TRANSPORTES LUIS SL", "Descripcion": "Siempre quiso trabajar muy duramente y desde joven"},
+        {"Imagen2":"Imagenes/Fran.jfif", "Jefe": "Manuel Cantina Pérez", "Empresa": "A K Fran", "Descripcion": "Siempre tuvo una buena relación con todo el mundo y una sonrisa"}],
+        "References":[{
+            "Photo2":"Imagenes/Luis.jfif", "Boss": "Luis Cenit Duarte", "Company": "Propietario de TRANSPORTES LUIS SL", "Description": "He always wanted to work very hard and from a young age"},
+            {"Photo2":"Imagenes/Fran.jfif", "Boss": "Manuel Cantina Pérez", "Company": "A K Fran", "Description": "He always wanted to work very hard and from a young age He always had a good relationship with everyone and a smile"}],
+    
+
+
+    "Idiomas":[{
+        "nomIdioma":"Español", "Nivel": "Experto"},
+        {"nomIdioma":"Inglés", "Nivel": "Medio"},
+        {"nomIdioma":"Francés", "Nivel": "Básico"}],
+        "Language":[{
+            "nomIdioma":"Spanish", "Nivel": "High"},
+            {"nomIdioma":"English", "Nivel": "Medium"},
+            {"nomIdioma":"French", "Nivel": "Basic"}],
+
+    "Educacion":[{
+                "Titulo": "Educacion Secundaria Obligatoria", "Lugar": "IES La Laguna","Fecha": "2013/2017"},
+                {"Titulo": "Bachillerato de Ciencias Tecnológico", "Lugar": "IES La Laguna","Fecha": "2017/201"},
+                {"Titulo": "Grado Superior Desarrollo De Aplicaciones Web", "Lugar": "IES Francisco Ayala","Fecha": "2019/2021"}],
+    "Education":[{
+                "Title": "Obligatory Secondary Education", "Place": "IES Virgen de la Caridad","Date": "2010/2016"},
+                {"Title": "Technological Sciences Baccalaureate", "Place": "IES La Laguna","Date": "2017/2019"},
+                {"Title": "Web applications Development Superior Degree", "Place": "IES Francisco Ayala","Date": "2019/2021"}],
+
+
+    "Habilidades":[{
+        "AptitudHabilidad": "Ofimática", "Nivel": "Avanzado"},
+        {"AptitudHabilidad": "GIMP", "Nivel": "Avanzado"},
+        {"AptitudHabilidad": "CSS", "Nivel": "Medio"},
+        {"AptitudHabilidad": "JavaScript", "Nivel": "Medio"},
+        {"AptitudHabilidad": "PHP", "Nivel": "Básico"}],    
+    "Skills":[{
+            "Skill": "Office automation", "Level": "Advanced"},
+            {"Skill": "GIMP", "Level": "Advanced"},
+            {"Skill": "CSS", "Level": "Medium"},
+            {"Skill": "JavaScript", "Level": "Medium"},
+            {"Skill": "PHP", "Level": "Basic"}],
+    
+
+    "Proyectos":[{
+    "ImagenProyecto": "Imagenes/ImgProyecto.png", "Titulo": "LandingPage"}]    
+    
+}
+
