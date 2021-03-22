@@ -4,7 +4,7 @@ function Juego(eleccion){
     console.log("Hemos decidido que 1:PIEDRA, 2:PAPEL, 3:TIJERA")
     console.log(a1+" eleccion de la maquina");
     console.log(eleccionusuario+ " eleccion usuario")
-    switch(eleccion){//guy
+    switch(eleccion){
         case 1: 
             if(a1==1) console.log("Ambos han sacado piedra");
             else{
