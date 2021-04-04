@@ -1,9 +1,8 @@
-let cadena='dfsonoa ñ njn jn   junjñnkjn'
+let cadena='  Esto   es   una  frase   ';
 
 function borraEspacios(cadenaC){
-    cadenaC.trim();
-
-    console.log(cadenaC);
+    var NcadenaC= cadenaC.replace(/\s/g, "");
+    console.log(NcadenaC);
 }
 
 borraEspacios(cadena);
