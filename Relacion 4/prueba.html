@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>JavaScript and the Document Object Model</title>
+        <script>
+            window.onload= inicia;
+            function inicia(){
+            document.getElementById("miH2").onclick = hacerclick;
+    
+            function hacerclick(){
+                alert("Has clickado");
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="header"><h1 id="title">Page title</h1></div>
+                <div id="content">
+                <h2>Content title</h2>
+                <h2 id="miH2">Content title 2</h2>
+                <p>Some copy goes here</p>
+                <p>More copy goes here</p>
+        </div>
+            </div>
+</body>
+</html>
