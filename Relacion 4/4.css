@@ -1,0 +1,12 @@
+body{
+    background-color: gray;
+    height: 97vh;
+    width: 98vw;
+}
+img{
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+}
