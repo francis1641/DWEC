@@ -2,11 +2,26 @@ body, html { height:100%;
 	margin:0;
 	padding:0;
 	width:100%;
-	background-color:silver;
 }
  
 .recuadro {
 	width:49.5%;
 	display:inline-block;
 	height:49.5%;
+}
+
+#primero{
+	background-color: white;
+}
+
+#segundo{
+	background-color: cyan;
+}
+
+#tercero{
+	background-color: greenyellow;
+}
+
+#cuarto{
+	background-color: orange;
 }
