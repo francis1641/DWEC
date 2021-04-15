@@ -1,0 +1,24 @@
+body{
+    background-image: url(img/fondo.jpg);
+    /*background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top:30px;*/
+
+}
+
+div#notas{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    /*background-image: url(img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;*/
+}
+
+div#notas div{
+    margin: 0.6rem;
+}
+
