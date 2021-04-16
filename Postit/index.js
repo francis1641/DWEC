@@ -1,3 +1,13 @@
+window.onload= function()
+{
+    aux = localStorage.getItem("notas");
+    if (aux)
+    {
+        listaNotas = aux;
+       // hay notas previas -> maquetarlas
+    }
+}
+
 class Nota{
     constructor(id, titulo, asunto, fecha){
         this.id=id;
@@ -9,16 +19,28 @@ class Nota{
 
 var listaNotas=[], numeroNota=1;
 
-function crearPostit(){
+function crear(){
+    titulo=document.querySelector("#titulo");
+    titulo=titulo.value;
+    textarea=document.querySelector("#asunto");
+    textarea=textarea.value;
+    fecha=Date.now(); 
+    listaNotas.push(new Nota(numeroNota, titulo, textarea, fecha));
+    numeroNota++;
+    
+}
+
+function crearPostit(listaNotas){
     // ME CREA EL POSIT Y LO INSERTA EN EL DIV NOTAS
+    for(let i=0;listaNotas.length;i++){
     contenedor=document.createElement("div");
     input=document.createElement("input");
     textarea=document.createElement("textarea");
     botonBorrar=document.createElement("button");
     botonBorrar.innerText= "Borrar";
     botonGuardar=document.createElement("button");
-    botonGuardar.innerText="Guardar"
-
+    botonGuardar.innerText="Guardar";
+    }  
     contenedor.setAttribute("id", numeroNota);
     //contenedor.setAttribute("onmouseover", "encontrarNota(event)");
 
@@ -78,7 +100,7 @@ function guardarNota(e){
     fecha=Date.now(); 
     let nNota= new Nota(guardarid, guardartitulo, guardarasunto, fecha);
     listaNotas.push(nNota);
-    localStorage.setItem(guardarid, JSON.stringify(nNota));
+    localStorage.setItem("notas", JSON.stringify(listaNotas));
 
     /*titulo.value= "";
     asunto.value= ""; */

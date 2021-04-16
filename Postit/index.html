@@ -9,7 +9,12 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body onmousemove="mover()">
-    <button onclick="crearPostit()">Crear Nota</button><hr>
+    <div id="cabecera">
+    <input id="titulo" type="text">
+    <textarea id="asunto"></textarea>
+    <button id="crear" onclick="crear()">Crear Nota</button>
+    </div>  
+    <hr>
 
     <div id="notas"></div>
 </body>

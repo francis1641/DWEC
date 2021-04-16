@@ -6,6 +6,13 @@ body{
 
 }
 
+div#cabecera{
+    margin-left: 20rem;
+    margin-right: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
 div#notas{
 
     display: flex;
@@ -22,3 +29,13 @@ div#notas div{
     margin: 0.6rem;
 }
 
+
+#asunto{
+    margin-top: 0.5rem;
+    resize: none;
+}
+
+#crear{
+    margin-top: 0.5rem;
+    margin-left: 35rem;
+}
