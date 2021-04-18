@@ -4,6 +4,7 @@ window.onload= function()
     if (aux)
     {
         listaNotas = aux;
+        //crearPostit(listaNotas);
        // hay notas previas -> maquetarlas
     }
 }
@@ -27,59 +28,106 @@ function crear(){
     fecha=Date.now(); 
     listaNotas.push(new Nota(numeroNota, titulo, textarea, fecha));
     numeroNota++;
+
+        contenedor=document.createElement("div");
+        input=document.createElement("input");
+        textarea=document.createElement("textarea");
+        botonBorrar=document.createElement("button");
+        botonBorrar.innerText= "Borrar";
+        botonGuardar=document.createElement("button");
+        botonGuardar.innerText="Guardar";
+    
+        contenedor.setAttribute("id", numeroNota);
+        //contenedor.setAttribute("onmouseover", "encontrarNota(event)");
+
+        /* ESTILO DE LA NOTA */
+        contenedor.style.width = "200px";
+        contenedor.style.height = "225px";
+        contenedor.style.border= "2px solid yellow"
+        contenedor.style.backgroundColor = "#FDFDAA";
+
+        textarea.setAttribute("class", "textarea");
+        textarea.style.height = "140px";
+        textarea.style.width = "180px";
+        textarea.style.margin = "7px";
+        textarea.style.resize= "none";
+        textarea.style.backgroundColor = "transparent";
+
+        input.setAttribute("class", "input");
+        input.style.height = "20px";
+        input.style.width = "100px";
+        input.style.marginLeft = "10px";
+        input.style.marginTop = "6px";
+        input.style.backgroundColor = "transparent";
+
+        botonBorrar.setAttribute("onClick", "borrarNota(event)");
+        botonBorrar.style.marginLeft = "10px";
+        botonBorrar.style.marginTop = "4px";
+
+        botonGuardar.setAttribute("onClick", "guardarNota(event)");
+        botonGuardar.style.marginLeft = "65px";
+    /* FIN ESTILO NOTA */
+
+        contenedor.appendChild(input);
+        contenedor.appendChild(textarea);
+        contenedor.appendChild(botonBorrar);
+        contenedor.appendChild(botonGuardar);
+
+        document.getElementById("notas").appendChild(contenedor);
+        numeroNota++;
     
 }
 
-function crearPostit(listaNotas){
-    // ME CREA EL POSIT Y LO INSERTA EN EL DIV NOTAS
-    for(let i=0;listaNotas.length;i++){
-    contenedor=document.createElement("div");
-    input=document.createElement("input");
-    textarea=document.createElement("textarea");
-    botonBorrar=document.createElement("button");
-    botonBorrar.innerText= "Borrar";
-    botonGuardar=document.createElement("button");
-    botonGuardar.innerText="Guardar";
-    }  
-    contenedor.setAttribute("id", numeroNota);
-    //contenedor.setAttribute("onmouseover", "encontrarNota(event)");
+function enseñarPostit(array){
+    // 
+    for(let i=0;array.length;i++){
+        contenedor=document.createElement("div");
+        input=document.createElement("input");
+        textarea=document.createElement("textarea");
+        botonBorrar=document.createElement("button");
+        botonBorrar.innerText= "Borrar";
+        botonGuardar=document.createElement("button");
+        botonGuardar.innerText="Guardar";
+    
+        contenedor.setAttribute("id", numeroNota);
+        //contenedor.setAttribute("onmouseover", "encontrarNota(event)");
 
-    /* ESTILO DE LA NOTA */
-    contenedor.style.width = "200px";
-    contenedor.style.height = "225px";
-    contenedor.style.border= "2px solid yellow"
-    contenedor.style.backgroundColor = "#FDFDAA";
+        /* ESTILO DE LA NOTA */
+        contenedor.style.width = "200px";
+        contenedor.style.height = "225px";
+        contenedor.style.border= "2px solid yellow"
+        contenedor.style.backgroundColor = "#FDFDAA";
 
-    textarea.setAttribute("class", "textarea");
-    textarea.style.height = "140px";
-    textarea.style.width = "180px";
-    textarea.style.margin = "7px";
-    textarea.style.resize= "none";
-    textarea.style.backgroundColor = "transparent";
+        textarea.setAttribute("class", "textarea");
+        textarea.style.height = "140px";
+        textarea.style.width = "180px";
+        textarea.style.margin = "7px";
+        textarea.style.resize= "none";
+        textarea.style.backgroundColor = "transparent";
 
-    input.setAttribute("class", "input");
-    input.style.height = "20px";
-    input.style.width = "100px";
-    input.style.marginLeft = "10px";
-    input.style.marginTop = "6px";
-    input.style.backgroundColor = "transparent";
+        input.setAttribute("class", "input");
+        input.style.height = "20px";
+        input.style.width = "100px";
+        input.style.marginLeft = "10px";
+        input.style.marginTop = "6px";
+        input.style.backgroundColor = "transparent";
 
-    botonBorrar.setAttribute("onClick", "borrarNota(event)");
-    botonBorrar.style.marginLeft = "10px";
-    botonBorrar.style.marginTop = "4px";
+        botonBorrar.setAttribute("onClick", "borrarNota(event)");
+        botonBorrar.style.marginLeft = "10px";
+        botonBorrar.style.marginTop = "4px";
 
-    botonGuardar.setAttribute("onClick", "guardarNota(event)");
-    botonGuardar.style.marginLeft = "65px";
+        botonGuardar.setAttribute("onClick", "guardarNota(event)");
+        botonGuardar.style.marginLeft = "65px";
     /* FIN ESTILO NOTA */
 
-    contenedor.appendChild(input);
-    contenedor.appendChild(textarea);
-    contenedor.appendChild(botonBorrar);
-    contenedor.appendChild(botonGuardar);
+        contenedor.appendChild(input);
+        contenedor.appendChild(textarea);
+        contenedor.appendChild(botonBorrar);
+        contenedor.appendChild(botonGuardar);
 
-    document.getElementById("notas").appendChild(contenedor);
-    numeroNota++;
-
+        document.getElementById("notas").appendChild(contenedor);
+        numeroNota++;
+    }
     
 }
 
