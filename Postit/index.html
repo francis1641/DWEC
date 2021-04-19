@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,12 @@
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body onmousemove="mover()">
+<body>
     <div id="cabecera">
     <input id="titulo" type="text">
     <textarea id="asunto"></textarea>
     <button id="crear" onclick="crear()">Crear Nota</button>
-    </div>  
-    <hr>
-
-    <div id="notas"></div>
+    </div>
+    <div onmousemove="mover()" id="notas"></div>
 </body>
 </html>

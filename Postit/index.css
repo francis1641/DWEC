@@ -1,5 +1,6 @@
 body{
     background-image: url(img/fondo.jpg);
+
     /*background-repeat: no-repeat;
     background-size: 100% 100%;
     top:30px;*/
@@ -7,14 +8,15 @@ body{
 }
 
 div#cabecera{
-    margin-left: 20rem;
-    margin-right: 20rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
     display: flex;
     flex-direction: column;
     justify-content:center;
 }
 div#notas{
-
+    height: 98vh;
+    width: 97vw;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -26,6 +28,7 @@ div#notas{
 }
 
 div#notas div{
+    position: relative;
     margin: 0.6rem;
 }
 
