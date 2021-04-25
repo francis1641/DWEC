@@ -4,6 +4,7 @@ window.onload= function()
     if (existenNotasGuardadas)
     {
         listaNotas = JSON.parse(existenNotasGuardadas);
+        numeroNota= listaNotas.length-1;
         for (i=0; i<listaNotas.length; i++)
             enseñarPostit(listaNotas[i])
         }
@@ -30,15 +31,11 @@ function crear(){
     listaNotas.push(nuevanota);
     enseñarPostit(nuevanota);
 
-    localStorage.setItem("notas", JSON.stringify(listaNotas));
-
-
-    //numeroNota++;
-    
+    localStorage.setItem("notas", JSON.stringify(listaNotas));    
 }
 
 function enseñarPostit(objnota){
-    //
+    
     contenedor=document.createElement("div");
     input=document.createElement("input");
     textarea=document.createElement("textarea");
@@ -56,10 +53,6 @@ function enseñarPostit(objnota){
         contenedor.style.border= "2px solid yellow"
         contenedor.style.backgroundColor = "#FDFDAA";
         contenedor.onclick=pinchar;
-       // posiciony=objnota.id*200;
-       // contenedor.style.top= posiciony+"px";
-        //posicionx=objnota.id*200;
-       // contenedor.style.left= posicionx+"px";
 
         textarea.setAttribute("class", "textarea");
         textarea.style.height = "140px";
@@ -96,30 +89,37 @@ function enseñarPostit(objnota){
 }
 
 document.borrarNota = function(e){
+    divid=0;
+    divid=e.target.parentNode.id;
+    divid--;
     e.target.parentNode.remove();
+    listaNotas.splice(divid, 1);
+    localStorage.setItem("notas", JSON.stringify(listaNotas)); 
 }
 
 function guardarNota(e){
+    guardarid=0;
     guardarid=e.target.parentNode.id;
-    guardartitulo=document.querySelector(".input");
+    guardarid--;
+    guardartitulo=e.target.parentNode.querySelector(".input");
     guardartitulo=guardartitulo.value;
 
-    guardarasunto=document.querySelector(".textarea");
+    guardarasunto=e.target.parentNode.querySelector(".textarea");
     guardarasunto=guardarasunto.value;
+
+    listaNotas[guardarid].titulo=guardartitulo;
+    listaNotas[guardarid].asunto=guardarasunto;
 
     //console.log(guardartitulo);
     //console.log(guardarasunto);
     fecha=Date.now(); 
-    let nNota= new Nota(guardarid, guardartitulo, guardarasunto, fecha);
-    listaNotas.push(nNota);
     localStorage.setItem("notas", JSON.stringify(listaNotas));
-
-    /*titulo.value= "";
-    asunto.value= ""; */
 
 }
 
-var clickado=false,numeroencontrarNota;
+var clickado=false;
+
+
 function mover(){
 
     if (clickado){
@@ -148,7 +148,8 @@ function pinchar(){
     incrY=evento1.clientY-evento1.target.offsetTop;
 }
 
+/*
     document.encontrarNota = function(e){
      numeroencontrarNota=e.target.id;
      console.log(numeroencontrarNota);
-}
+}*/

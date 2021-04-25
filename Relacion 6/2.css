@@ -1,0 +1,52 @@
+body, html { height:100%;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+ 
+.recuadro {
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+    position: relative;
+}
+
+#primero{
+	background-color: white;
+}
+
+#segundo{
+	background-color: cyan;
+}
+
+#tercero{
+	background-color: greenyellow;
+}
+
+#cuarto{
+	background-color: orange;
+}
+
+/*.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  */
+  .recuadro .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .recuadro:hover .tooltiptext {
+    visibility: visible;
+  }
