@@ -7,7 +7,7 @@ function loadDoc() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         misDatos= JSON.parse(this.responseText);
-        console.log(misDatos.resultado);
+        document.getElementById("3input").value= misDatos.resultado;
       }
     };
     xhttp.open("GET", "Calculadora.php?mivariable="+id+"&valor1="+valor1+"&valor2="+valor2, true);

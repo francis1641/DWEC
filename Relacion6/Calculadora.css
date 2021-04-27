@@ -1,0 +1,9 @@
+#midiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#suma, #resta, #mult, #divi{
+    margin: 0.2rem;
+}
