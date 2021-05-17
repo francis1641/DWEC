@@ -1,9 +1,9 @@
 function boton1(){
-    alert("Has pulsado el boton 1")
+    alert($("head").html())
 }
 
 function boton2(){
-    alert("Has pulsado el boton 2")
+    alert($("body").html())
 }
 
 function parrafo1(){
@@ -29,13 +29,13 @@ function cambiarTexto(){
 }
 
 function cambiarColor(){
-    $("#color").click(function(){
+    $(".color").click(function(){
         $(this).attr("style", "background: blue");
       });
 }
 
 function ocultarFila(){
-    $("#fila").click(function(){
+    $(".fila").click(function(){
         $(this).hide();
       });
 }
